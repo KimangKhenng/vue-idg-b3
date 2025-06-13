@@ -1,17 +1,5 @@
 <template>
-  <header class="bg-orange-900 text-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <h1 class="text-3xl font-bold">Book Store</h1>
-      <nav>
-        <ul class="flex space-x-6 text-lg">
-          <li><a href="#" class="hover:underline">Home</a></li>
-          <li><a href="#" class="hover:underline">Bestsellers</a></li>
-          <li><a href="#" class="hover:underline">Categories</a></li>
-          <li><a href="#" class="hover:underline">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <Navigator />
   <div class="bg-white">
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900">Bestsellers</h2>
@@ -42,14 +30,17 @@
       <!-- More products... -->
     </div>
   </div>
-  <footer class="bg-gray-800 text-white py-6">
-    <div class="max-w-7xl mx-auto px-4">
-      <p class="text-center">© 2023 Book Store. All rights reserved.</p>
-    </div>
-  </footer>
+  <MyFooter />
+
 </template>
 <script>
+import Navigator from '@/components/navigator.vue';
+import MyFooter from '@/components/MyFooter.vue';
 export default {
+  components: {
+    Navigator,
+    MyFooter
+  },
   data() {
     return {
       books: [
